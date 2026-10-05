@@ -32,6 +32,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
+import Link from "next/link";
 
 const images = [
   "/main.jpg",
@@ -75,9 +76,9 @@ const Hero = () => {
           <p className="mb-5">
             Pack your bags. We’re going on vacation!
           </p>
-          <button className="btn btn-primary rounded-box shadow-lg hover:scale-105 transition-transform">
+          <Link href="/plan" className="btn btn-primary rounded-box shadow-lg hover:scale-105 transition-transform">
             Get Started
-          </button>
+          </Link>
         </div>
       </div>
     </div>

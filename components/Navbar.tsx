@@ -42,6 +42,7 @@
 
 
 import React from 'react'
+import Link from 'next/link'
 
 const Navbar = () => {
   return (
@@ -67,18 +68,18 @@ const Navbar = () => {
             tabIndex={0}
             className="menu menu-sm dropdown-content bg-white/90 backdrop-blur-md rounded-xl z-[1] mt-3 w-52 p-2 shadow text-gray-800"
           >
-            <li><a className="hover:text-pink-600">Homepage</a></li>
-            <li><a className="hover:text-pink-600">Cost Calculator</a></li>
-            <li><a className="hover:text-pink-600">About</a></li>
+            <li><Link href="/" className="hover:text-pink-600">Homepage</Link></li>
+            <li><Link href="/plan" className="hover:text-pink-600">Plan a Trip</Link></li>
+            <li><Link href="/verify" className="hover:text-pink-600">Verify a Hotel</Link></li>
           </ul>
         </div>
       </div>
 
       {/* Center brand */}
       <div className="navbar-center">
-        <a className="text-2xl font-bold tracking-wide text-pink-600 drop-shadow-sm hover:text-indigo-600 transition">
+        <Link href="/" className="text-2xl font-bold tracking-wide text-pink-600 drop-shadow-sm hover:text-indigo-600 transition">
           PackAndGO
-        </a>
+        </Link>
       </div>
 
       <div className="navbar-end">

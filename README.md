@@ -23,6 +23,20 @@
 
 ---
 
+## What's built (MVP)
+
+| Route | What it does |
+|---|---|
+| `/plan` | Pick a destination (click the map or choose from the list), dates, travellers, budget and interests. Builds a day-by-day route, picks a credible hotel, safe bus/train/flight/cab tickets and a licensed guide, and shows the full price (including an 8% safety reserve). |
+| `/plan` → Safety center | Live alert zones on the map. Auto-reroutes unsafe stops, moves you out of an affected hotel, and when a destination becomes unsafe offers **return home today** (books the ticket, refunds the rest), **continue the trip in a safe nearby destination**, or **cancel**. Remove single stops, cancel a day's route, or cancel the whole trip. Every refund/charge goes into a payment ledger. |
+| `/verify` | Hotel credibility checker: cross-platform rating agreement, verified stays, review bursts, copy-paste reviews, complaints, tourism registration. Works on the sample hotels or anything you paste in. |
+
+Code map: `lib/planner.ts` (itinerary + budget fitting), `lib/credibility.ts` (hotel scoring), `lib/transport.ts` (tickets), `lib/safety.ts` (disaster protocol), `lib/data.ts` (sample data), `lib/providers.ts` (interfaces for real APIs).
+
+**Demo limitations:** hotels and guides are fictional, prices are estimates, alerts are simulated, and nothing is actually booked. Hook real hazard feeds, review sources and ticket inventory into `lib/providers.ts` to go live.
+
+---
+
 ##  Tech Stack
 
 - **Framework**: Next.js (React + TypeScript) — used for both frontend and backend logic via API routes :contentReference[oaicite:1]{index=1}  
